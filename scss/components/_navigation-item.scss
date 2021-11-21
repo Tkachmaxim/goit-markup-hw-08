@@ -4,7 +4,7 @@
     flex-direction: column;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     width: 294px;
     justify-content: space-between;
@@ -12,9 +12,13 @@
   }
 
   @media screen and (min-width: 1200px) {
-    display: flex;
-    width: 294px;
-    justify-content: space-between;
+    display: inline-block;
+    width: inherit;
+    margin-left: 238px;
+    width: 302px;
+    .header-menu__navigation-item + .header-menu__navigation-item {
+      margin-left: 50px;
+    }
   }
 }
 

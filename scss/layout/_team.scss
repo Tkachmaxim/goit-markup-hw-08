@@ -4,6 +4,9 @@
   text-align: center;
   line-height: 1.17;
   padding-top: 60px;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 
 .team__title {

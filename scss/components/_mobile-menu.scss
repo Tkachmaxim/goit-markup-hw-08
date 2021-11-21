@@ -2,17 +2,16 @@
   display: none;
   position: absolute;
   width: 100%;
-  max-width: 767px;
   top: 0px;
+  left: 0;
   margin: 0 0;
+  overflow: scroll;
 
   background-color: #ffff;
   &.is-open {
-    width: 100%;
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 }
 @media screen and (max-width: 767px) {
@@ -34,7 +33,7 @@
 @media screen and (min-width: 1200px) {
   .header-menu__mobile-menu {
     position: relative;
-    display: flex;
+    display: inline-block;
   }
 }
 

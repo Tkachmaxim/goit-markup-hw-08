@@ -341,18 +341,17 @@ summary {
   display: none;
   position: absolute;
   width: 100%;
-  max-width: 767px;
   top: 0px;
+  left: 0;
   margin: 0 0;
+  overflow: scroll;
   background-color: #ffff;
 }
 
 .header-menu__mobile-menu.is-open {
-  width: 100%;
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -374,7 +373,7 @@ summary {
 @media screen and (min-width: 1200px) {
   .header-menu__mobile-menu {
     position: relative;
-    display: flex;
+    display: inline-block;
   }
 }
 
@@ -416,7 +415,7 @@ summary {
 @media screen and (max-width: 767px) {
   .header-menu__social-monbile {
     display: flex;
-    margin-top: 64px;
+    margin-top: 8%;
   }
 }
 
@@ -506,9 +505,11 @@ summary {
 
 @media screen and (min-width: 1200px) {
   .logo {
-    padding: 0 0;
-    margin: 24px 93px 25px 0;
-    display: inline-block;
+    font-size: 26px;
+    margin: 0;
+    padding: 24px 0 25px 0;
+    position: absolute;
+    z-index: 10;
   }
 }
 
@@ -529,6 +530,13 @@ summary {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .logo.footer__logo {
+    position: relative;
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .header-menu__navigation {
     display: flex;
@@ -536,7 +544,7 @@ summary {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .header-menu__navigation {
     display: flex;
     width: 294px;
@@ -547,9 +555,13 @@ summary {
 
 @media screen and (min-width: 1200px) {
   .header-menu__navigation {
-    display: flex;
-    width: 294px;
-    justify-content: space-between;
+    display: inline-block;
+    width: inherit;
+    margin-left: 238px;
+    width: 302px;
+  }
+  .header-menu__navigation .header-menu__navigation-item + .header-menu__navigation-item {
+    margin-left: 50px;
   }
 }
 
@@ -640,14 +652,16 @@ summary {
 
 @media screen and (min-width: 1200px) {
   .header-menu__contacts {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    text-align: center;
+    margin: 0 0 0 305px;
+    display: inline-block;
     font-size: 14px;
     color: #757575;
     font-weight: 500;
     line-height: 1.17;
+  }
+  .header-menu__contacts .header-menu__contacts-item {
+    display: inline-block;
+    padding: 32px 0;
   }
 }
 
@@ -662,7 +676,7 @@ summary {
 /* задаем геометрию контактов для мобильной версии */
 @media screen and (max-width: 767px) {
   .header-menu__contacts {
-    margin: 0 0;
+    margin-top: 38%;
     padding: 0 0;
   }
   .header-menu__contacts-item {
@@ -687,7 +701,7 @@ summary {
 
 @media screen and (min-width: 1200px) {
   .header-menu__contacts-item {
-    padding: 32px 0 32px;
+    padding: 0;
   }
 }
 
@@ -1101,8 +1115,7 @@ summary {
 
 @media screen and (min-width: 1200px) {
   .header-menu {
-    display: flex;
-    justify-content: space-between;
+    display: inline-block;
   }
 }
 
@@ -1191,13 +1204,25 @@ summary {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .feautures__icon {
+    width: 270px;
+    height: 120px;
+    padding: 25px 0;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: #f5f4fa;
+  }
+}
+
 .hero {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 60px;
   padding: 118px 0 118px;
   text-align: center;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }
 
 @media screen and (max-width: 479px) {
@@ -1225,6 +1250,7 @@ summary {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-bottom: 0px;
     height: 600px;
     width: 1600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background.jpg");
@@ -1252,7 +1278,7 @@ summary {
 }
 
 .section.expertise {
-  padding-top: 0px;
+  padding-top: 94px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1300,6 +1326,12 @@ summary {
   text-align: center;
   line-height: 1.17;
   padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding: 94px 0;
+  }
 }
 
 .team__title {
@@ -1392,6 +1424,7 @@ summary {
 @media screen and (min-width: 1200px) {
   .customers__title {
     margin-bottom: 50px;
+    margin-top: 0;
     font-size: 36px;
     color: var(--font-heading-color);
     font-weight: 700;
@@ -1404,6 +1437,12 @@ summary {
   flex-wrap: wrap;
   justify-content: center;
   margin: -15px;
+}
+
+@media screen and (min-width: 1200px) {
+  .customers-list {
+    flex-wrap: nowrap;
+  }
 }
 
 .customer {
@@ -1548,7 +1587,9 @@ summary {
 
 @media screen and (min-width: 1200px) {
   .footer-content {
+    width: 1600px;
     display: flex;
+    text-align: left;
   }
 }
 
@@ -1577,7 +1618,7 @@ summary {
 
 @media screen and (min-width: 1200px) {
   .footer-conten__media {
-    margin-top: 72px;
+    margin-top: 12px;
     margin-left: 70px;
   }
 }
@@ -1612,6 +1653,8 @@ summary {
   .footer__form {
     display: flex;
     justify-content: center;
+    padding-top: 12px;
+    flex-direction: row;
   }
 }
 
@@ -1635,7 +1678,6 @@ summary {
 @media screen and (min-width: 1200px) {
   .footer-conten__subscribe-section {
     width: 358px;
-    margin-top: 72px;
     margin-left: 93px;
   }
 }
@@ -1662,15 +1704,21 @@ summary {
 
 @media (min-width: 1200px) {
   .footer-content__submit-button {
-    margin-top: 108px;
+    margin-top: 35px;
     margin-left: 12px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer-content__adress-and-media {
     display: flex;
     justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-content__adress-logo {
+    margin-left: 15px;
   }
 }
 /*# sourceMappingURL=main.css.map */
