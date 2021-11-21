@@ -1,0 +1,122 @@
+.footer {
+  padding-top: 0px;
+  background-color: var(--background-footer-color);
+  color: var(--accent-color);
+  --font-heading-color: var(--accent-color);
+}
+
+.footer-content {
+  display: block;
+  padding-top: 60px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.footer-content__mail,
+.footer-content__phone {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 9px;
+  &:hover,
+  &:focus {
+    color: var(--hover-web-color);
+  }
+}
+
+.footer-conten__media {
+  margin-top: 60px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) and(max-width:1200px) {
+    margin-top: 5px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 72px;
+    margin-left: 70px;
+  }
+}
+
+.footer-conten__media-title {
+  font-size: var(--font-size-header-footer-features);
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.footer-content__social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer-content__adress {
+  line-height: 1.71;
+  font-style: normal;
+}
+
+.footer__form {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.footer-conten__subscribe-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 450px;
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+
+    margin-top: 72px;
+    margin-left: 93px;
+  }
+}
+
+.footer-content__subscribe-label {
+  margin-bottom: 20px;
+}
+
+.footer-content__subscribe-email {
+  padding: 15px 16px;
+  background-color: var(--background-footer-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--accent-color);
+  &::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.footer-content__submit-button {
+  margin-top: 20px;
+
+  @media (min-width: 1200px) {
+    margin-top: 108px;
+    margin-left: 12px;
+  }
+}
+
+@media screen and(min-width:768px) and(max-width:1200px) {
+  .footer-content__adress-and-media {
+    display: flex;
+    justify-content: space-around;
+  }
+}

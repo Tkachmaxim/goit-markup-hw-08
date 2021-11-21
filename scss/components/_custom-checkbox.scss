@@ -1,0 +1,8 @@
+.checkbox:checked ~ .agree::before {
+    background-color: var(--hover-web-color);
+    border-radius: 4px;
+    background-image: url("../images/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-origin: content-box;
+  }

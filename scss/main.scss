@@ -1,0 +1,36 @@
+//BASE
+@import "./base/common";
+
+//UTILS
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./utils/is-hidden";
+@import "./utils/set-font-parameters";
+
+//СOMPONENTS
+@import "./components/mobile-menu";
+@import "./components/phone-menu";
+@import "./components/header-menu__social-monbile";
+@import "./components/section";
+@import "./components/container";
+@import "./components/logo";
+@import "./components/navigation-item";
+@import "./components/contacts";
+@import "./components/button";
+@import "./components/backdrop";
+@import "./components/modal-window";
+@import "./components/modal-window-form";
+@import "./components/modal-window-close-button";
+@import "./components/agreement";
+@import "./components/custom-checkbox";
+@import "./components/social-icon";
+
+//LAYOUT
+@import "./layout/header";
+@import "./layout/feature-item";
+@import "./layout/hero";
+@import "./layout/expertise";
+@import "./layout/team";
+@import "./layout/customers";
+@import "./layout/projects";
+@import "./layout/footer";

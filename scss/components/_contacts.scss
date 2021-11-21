@@ -1,0 +1,132 @@
+.header-menu__phone,
+.header-menu__email {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-menu__contacts {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 84px;
+    @include font_size_color_line_weight(12px, #757575, 1.17, 500);
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    text-align: center;
+    @include font_size_color_line_weight(14px, #757575, 1.17, 500);
+  }
+}
+
+.header-menu__contacts-item {
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    color: var(--hover-link-color);
+  }
+}
+
+/* задаем геометрию контактов для мобильной версии */
+@media screen and (max-width: 767px) {
+  .header-menu__contacts {
+    margin: 0 0;
+    padding: 0 0;
+  }
+  .header-menu__contacts-item {
+    padding: 0 0;
+    margin: 0 0;
+  }
+}
+
+/* цвет и размеры телефона и почты в мобильной версии и маржины для создания аысоты мобильного меню*/
+@media screen and (max-width: 767px) {
+  .header-menu__email {
+    color: #757575;
+    font-size: 24px;
+  }
+
+  .header-menu__phone {
+    color: var(--hover-link-color);
+    font-size: 34px;
+    font-weight: 500;
+    margin: 0px 0 32px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-menu__contacts-item {
+    padding: 32px 0 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-menu__contacts-item + .header-menu__contacts-item {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .header-menu__contacts-item:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+/* скрываем икогнки в мобильной версии */
+
+@media screen and (max-width: 768px) {
+  .header-menu__icon-email {
+    display: none;
+  }
+
+  .header-menu__icon-phone {
+    display: none;
+  }
+}
+
+/* задаем размер иконок под таблетку */
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .header-menu__icon-email {
+    display: inline-block;
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+    fill: currentColor;
+  }
+
+  .header-menu__icon-phone {
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+}
+
+/* задаем размер иконок под десктоп */
+
+@media screen and (min-width: 1200px) {
+  .header-menu__icon-email {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  .header-menu__icon-phone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}

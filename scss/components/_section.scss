@@ -1,0 +1,11 @@
+.section {
+  padding: 0px 15px 60px 15px;
+  @media (min-width: 1200px) {
+    padding: 94px 0px;
+  }
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.17;
+}

@@ -1,0 +1,22 @@
+/* показываем только в мобильной версии  */
+.header-menu__social-monbile {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    margin-top: 64px;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header-menu__social-list-item {
+  display: inline-block;
+  color: var(--hover-link-color);
+  font-size: 18px;
+  line-height: 1.22;
+}
+
+.header-menu__social-list-item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}

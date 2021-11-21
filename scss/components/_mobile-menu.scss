@@ -1,0 +1,47 @@
+.header-menu__mobile-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-width: 767px;
+  top: 0px;
+  margin: 0 0;
+
+  background-color: #ffff;
+  &.is-open {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-menu__mobile-menu {
+    height: 100vh;
+    padding: 48px 40px;
+  }
+}
+
+/* устнавливаем правила показа меню для таблетки и десктопа */
+@media screen and (min-width: 768px) {
+  .header-menu__mobile-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-menu__mobile-menu {
+    position: relative;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-menu__navigation-and-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

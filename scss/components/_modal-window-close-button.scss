@@ -1,0 +1,19 @@
+.close-btn {
+  background-color: var(--accent-color);
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  &:hover .close-btn__icon,
+  &:focus .close-btn__icon {
+    fill: var(--hover-web-color);
+  }
+}
+
+.close-btn__icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

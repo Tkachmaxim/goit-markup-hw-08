@@ -1,0 +1,42 @@
+.section.expertise {
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+  padding-top: 0px;
+}
+
+.container__expertises-title {
+  color: var(--font-heading-color);
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+.expertises {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.expertises__item {
+  position: relative;
+}
+
+.expertises__title {
+  text-align: center;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  bottom: 0;
+  padding: 27px 0 27px;
+  text-transform: uppercase;
+
+  @include font_size_color_line_weight(
+    var(--font-size-header-footer-features),
+    var(--accent-color),
+    1.17,
+    700
+  );
+}

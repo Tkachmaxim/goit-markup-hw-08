@@ -1,0 +1,37 @@
+.modal-window__agreement {
+  margin-top: 20px;
+  font-size: 12px;
+
+  @media (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+.modal-window__link {
+  display: inline-block;
+  color: var(--hover-web-color);
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.modal-window__agree {
+  align-items: center;
+  justify-content: center;
+  &::before {
+    display: inline-block;
+    content: " ";
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    background-image: url("../images/border-check.svg");
+  }
+}
+
+.modal-window__checkbox:checked ~ .modal-window__agree::before {
+  background-color: var(--hover-web-color);
+  border-radius: 4px;
+  background-image: url("../images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-origin: content-box;
+}

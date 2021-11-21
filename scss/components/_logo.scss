@@ -1,0 +1,39 @@
+.logo {
+  display: block;
+  margin: 16px 15px;
+  font-family: Raleway;
+  @include font_size_color_line_weight(
+    24px,
+    var(--font-heading-color),
+    1.19,
+    700
+  );
+  &:focus,
+  &:hover {
+    color: var(--hover-link-color);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    margin: 26px 0 26px 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 0;
+    margin: 24px 93px 25px 0;
+    display: inline-block;
+  }
+}
+
+.logo__span {
+  color: var(--hover-link-color);
+}
+
+.footer__logo {
+  margin: 0 0 20px 0;
+  @media screen and(min-width:1200px) {
+    margin-top: 0;
+    padding: 0 0 0 0;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+}
