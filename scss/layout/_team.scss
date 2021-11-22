@@ -38,7 +38,7 @@
     width: 100%;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  @media screen and (min-width: 768px) {
     width: 768px;
     display: flex;
     flex-wrap: wrap;
@@ -48,7 +48,8 @@
 
   @media screen and (min-width: 1200px) {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 }
 
@@ -62,8 +63,13 @@
   border-radius: 0px 0px 4px 4px;
   background: var(--accent-color);
 
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  @media screen and (min-width: 768px) {
     width: 354px;
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270x;
     margin: 15px;
   }
 

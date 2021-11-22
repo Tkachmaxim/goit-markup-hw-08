@@ -1419,7 +1419,7 @@ summary {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .members {
     width: 768px;
     display: flex;
@@ -1432,7 +1432,8 @@ summary {
 @media screen and (min-width: 1200px) {
   .members {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 }
 
@@ -1448,9 +1449,16 @@ summary {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .member {
     width: 354px;
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .member {
+    width: 270x;
     margin: 15px;
   }
 }
