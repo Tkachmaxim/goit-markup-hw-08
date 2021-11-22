@@ -351,6 +351,8 @@ summary {
   position: fixed;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
+  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
@@ -827,10 +829,42 @@ summary {
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
+  padding-top: 60px;
 }
 
-.filter__item + .filter__item {
-  margin-left: 8px;
+@media screen and (max-width: 768px) {
+  .filter {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter__item + .filter__item {
+    margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filter__item {
+    margin-left: 0;
+    padding-bottom: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter__item {
+    margin-right: 8px;
+  }
 }
 
 .filter-button {
@@ -1020,6 +1054,7 @@ summary {
 }
 
 .modal-window__agree {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -1222,20 +1257,39 @@ summary {
   text-align: center;
   background-size: cover;
   background-position: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background_phone.jpg");
-    height: 400px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mobile@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mobile@1x.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 480px), screen and (min-resolution: 192dpi) and (min-width: 480px), screen and (min-resolution: 2dppx) and (min-width: 480px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mobile@2x.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background_tablet.jpg");
-    height: 400px;
-    min-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Header-tablet.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Header-tablet@2x.jpg");
   }
 }
 
@@ -1243,15 +1297,21 @@ summary {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    margin-bottom: 0px;
-    height: 600px;
-    max-width: 1600px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background.jpg");
-    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-desktop.jpg");
+  }
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
 
-.hero__title {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-desktop2x.jpg");
+  }
+}
+
+.hero .hero__title {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.06em;
@@ -1262,7 +1322,7 @@ summary {
 }
 
 @media screen and (min-width: 1200px) {
-  .hero__title {
+  .hero .hero__title {
     font-size: 44px;
     color: var(--accent-color);
     font-weight: 900;
@@ -1488,10 +1548,31 @@ summary {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 1200px) {
+  .section.container {
+    padding-top: 0;
+  }
+}
+
 .projects {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
 }
 
 .projects__link {
@@ -1515,11 +1596,11 @@ summary {
 
 .projects__describe {
   display: block;
+  height: 100%;
   position: absolute;
   width: 100%;
-  height: 100%;
   padding: 63px 24px;
-  margin-top: 0;
+  margin-top: 0 24px;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(0%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1529,17 +1610,35 @@ summary {
   line-height: 1.56;
 }
 
+@media screen and (max-width: 768px) {
+  .projects__describe {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .projects__image-overlay {
   position: relative;
   overflow: hidden;
 }
 
-.projects__item:not(:nth-child(3n)) {
-  margin-right: 30px;
+@media screen and (max-width: 768px) {
+  .projects__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-.projects__item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .projects__item {
+    margin: 15px;
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    width: 370px;
+  }
 }
 
 .projects__capture {
@@ -1550,7 +1649,8 @@ summary {
 }
 
 .projects__name {
-  display: block;
+  white-space: nowrap;
+  display: inline-block;
   margin-bottom: 4px;
   letter-spacing: 0.06em;
   font-size: 18px;
@@ -1560,6 +1660,7 @@ summary {
 }
 
 .projects__kind {
+  display: block;
   font-size: 16px;
   line-height: 1.88;
   color: #757575;

@@ -59,10 +59,34 @@
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
+  padding-top: 60px;
+
+  @media screen and(max-width:768px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 40px;
+  }
+  @media screen and(min-width:768px) {
+    justify-content: center;
+    padding-bottom: 30px;
+  }
 }
 
-.filter__item + .filter__item {
-  margin-left: 8px;
+@media screen and(min-width:1200px) {
+  .filter__item + .filter__item {
+    margin-left: 8px;
+  }
+}
+
+.filter__item {
+  @media screen and(max-width:768px) {
+    margin-left: 0;
+    padding-bottom: 15px;
+    padding-right: 15px;
+  }
+  @media screen and(min-width:768px) {
+    margin-right: 8px;
+  }
 }
 
 .filter-button {

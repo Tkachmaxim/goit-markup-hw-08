@@ -15,6 +15,7 @@
 }
 
 .modal-window__agree {
+  display: flex;
   align-items: center;
   justify-content: center;
   &::before {

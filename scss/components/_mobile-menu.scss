@@ -11,6 +11,8 @@
     position: fixed;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
+    z-index: 1;
   }
 }
 @media screen and (max-width: 767px) {
