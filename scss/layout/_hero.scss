@@ -1,12 +1,12 @@
 .hero {
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 60px;
-  padding: 118px 0 118px;
+  padding: 118px 0 118px 0;
   text-align: center;
   background-size: cover;
   background-position: center;
-
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -85,7 +85,10 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.06em;
-    @include font_size_color_line_weight(26px, var(--accent-color), 1.62, 900);
+    @include font_size_color_line_weight(5.4vw, var(--accent-color), 1.62, 900);
+    @media screen and (min-width: 480px) {
+      font-size: 26px;
+    }
     @media screen and (min-width: 1200px) {
       @include font_size_color_line_weight(
         44px,
