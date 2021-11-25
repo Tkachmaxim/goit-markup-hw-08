@@ -6,11 +6,8 @@
 
 .header-menu__contacts {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+  display: flex;
+  flex-direction: column-reverse;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -20,7 +17,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    margin: 0 0 0 305px;
+    margin-left: 305px;
     display: inline-block;
     @include font_size_color_line_weight(14px, #757575, 1.17, 500);
     .header-menu__contacts-item {
