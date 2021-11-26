@@ -1,26 +1,38 @@
 .header {
+  position: relative;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #ececec;
 }
 
 .header-menu {
-  width: 100%;
   display: flex;
   align-items: center;
   position: relative;
   justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-@media screen and (min-width: 768px) {
-  .header-menu {
-    display: flex;
-    justify-content: left;
+.header-menu.is-open {
+  align-items: flex-start;
+  justify-content: right;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  @media screen and (min-width: 768px) {
+    .header-menu {
+      display: flex;
+      justify-content: left;
+    }
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .header-menu {
-    display: inline-block;
+  @media screen and (min-width: 1200px) {
+    .header-menu {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }

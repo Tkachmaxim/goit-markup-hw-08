@@ -1,11 +1,12 @@
 /* показываем только в мобильной версии  */
-.header-menu__social-monbile {
-  @media screen and (max-width: 767px) {
-    display: flex;
-    margin-top: 8%;
+.header-menu__social-monbile.mobile {
+  display: none;
+  margin-top: 8vh;
+  @media screen and (min-width: 480px) {
+    margin-top: 64px;
   }
-  @media screen and (min-width: 768px) {
-    display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
   }
 }
 

@@ -1,9 +1,5 @@
 .header-menu__navigation {
-  @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-  }
-
+  display: none;
   @media screen and (min-width: 768px) {
     display: flex;
     width: 294px;
@@ -12,20 +8,24 @@
   }
 
   @media screen and (min-width: 1200px) {
-    display: inline;
-    margin-left: 238px;
+    display: flex;
+    margin-left: -49.6px;
     .header-menu__navigation-item + .header-menu__navigation-item {
       margin-left: 50px;
     }
+  }
+  &.mobile {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 /* меню телефон */
 
-@media screen and (max-width: 767px) {
-  .header-menu__navigation-item {
+@media screen and (max-width: 768px) {
+  .header-menu__mobile-item {
     @include font_size_color_line_weight(
-      40px,
+      8.3vw,
       var(--font-heading-color),
       1.17,
       500
@@ -70,7 +70,7 @@
 .header-menu__navigation-item--active {
   color: var(--hover-link-color);
   &::after {
-    display: block;
+    display: none;
     content: "";
     height: 4px;
     width: 100%;
@@ -81,9 +81,8 @@
   }
 }
 
-/* убираем подчеркивание меню в мобильной версии */
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .header-menu__navigation-item--active::after {
-    display: none;
+    display: block;
   }
 }

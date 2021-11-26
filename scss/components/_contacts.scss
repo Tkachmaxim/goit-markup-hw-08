@@ -9,6 +9,18 @@
   display: flex;
   flex-direction: column-reverse;
 
+  &.mobile {
+    display: none;
+  }
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    &.mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -17,8 +29,9 @@
   }
 
   @media screen and (min-width: 1200px) {
-    margin-left: 305px;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+
     @include font_size_color_line_weight(14px, #757575, 1.17, 500);
     .header-menu__contacts-item {
       display: inline-block;
@@ -36,43 +49,35 @@
 }
 
 /* задаем геометрию контактов для мобильной версии */
-@media screen and (max-width: 767px) {
-  .header-menu__contacts {
+@media screen and (max-width: 768px) {
+  .header-menu__contacts.mobile {
     margin-top: 38%;
     padding: 0 0;
   }
-  .header-menu__contacts-item {
+  .header-menu__contacts-item.mobile {
     padding: 0 0;
     margin: 0 0;
   }
 }
 
 /* цвет и размеры телефона и почты в мобильной версии и маржины для создания аысоты мобильного меню*/
-@media screen and (max-width: 767px) {
-  .header-menu__email {
-    color: #757575;
-    font-size: 24px;
-  }
 
-  .header-menu__phone {
-    color: var(--hover-link-color);
-    font-size: 34px;
-    font-weight: 500;
-    margin: 0px 0 32px 0;
-  }
+.header-menu__email.mobile {
+  color: #757575;
+  font-size: 24px;
+}
+
+.header-menu__phone.mobile {
+  color: var(--hover-link-color);
+  font-size: 7vw;
+  font-weight: 500;
+  margin: 0px 0 4vh 0;
 }
 
 @media screen and (max-width: 480px) {
   color: #757575;
   .header-menu__email {
     font-size: 5vw;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .header-menu__phone {
-    font-size: 7vw;
-    margin: 0px 0 4vh 0;
   }
 }
 

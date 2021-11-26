@@ -5,17 +5,19 @@
   top: 0px;
   left: 0;
   margin: 0 0;
-
   background-color: #ffff;
+
   &.is-open {
     position: fixed;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     overflow: scroll;
     z-index: 1;
   }
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 768px) {
   .header-menu__mobile-menu {
     height: 100vh;
     padding: 48px 40px;
@@ -26,7 +28,7 @@
 @media screen and (min-width: 768px) {
   .header-menu__mobile-menu {
     position: relative;
-    display: flex;
+    display: none;
     align-items: center;
   }
 }
@@ -34,11 +36,11 @@
 @media screen and (min-width: 1200px) {
   .header-menu__mobile-menu {
     position: relative;
-    display: inline-block;
+    display: none;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header-menu__navigation-and-contacts {
     display: flex;
     flex-direction: column;
