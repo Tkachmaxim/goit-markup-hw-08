@@ -57,13 +57,11 @@
         <!--     </div> -->
     
             <button type="button" class="header-menu__phone-menu-icon" data-menu-button>
-                <svg class="header-menu__phone-menu-icons" width="24" height="16" aria-label="Переключатель мобильного меню"
-                    aria-expanded="false">
+                <svg class="header-menu__phone-menu-icons" width="24" height="16" aria-label="Переключатель мобильного меню" aria-expanded="false" role="button">
                     <use class="header-menu__icon-open" href="./images/symbol-defs.svg#icon-menu_24px"></use>
                     <use class="header-menu__icon-close" href="./images/symbol-defs.svg#icon-close_24px"></use>
                 </svg>
             </button>
-    
         </div>
     </header>
 </div>
@@ -71,7 +69,7 @@
 <main>
 
     <!--hero -->
-    <div class="hero"><
+    <div class="hero">
         <div class="container"> 
         <h1 class="hero__title">Эффективные решения <br> для вашего бизнеса</h1>
         <button class="hero__order-btn" type="button" data-modal-open>Заказать услугу</button>
@@ -503,7 +501,7 @@
 
 
 
- <footer>
+<footer>
 <section class="footer">
   <div class="container">
         <div class="footer-content">
@@ -578,6 +576,8 @@
   </div>
 </section>
 </footer> 
+
+
 <div class="header-menu__mobile-menu" data-menu>
     <ul class="header-menu__navigation mobile">
         <li class="header-menu__mobile-item header-menu__navigation-item--active"><a class="link active"
@@ -587,7 +587,7 @@
         <li class="header-menu__mobile-item"><a class="link cts" href="">Контакты</a></li>
     </ul>
     
-    <div class='header-menu__mobile-contacts-and-social'>
+<div class='header-menu__mobile-contacts-and-social'>
     <ul class="header-menu__contacts mobile">
     
         <li class="header-menu__contacts-item">
@@ -622,10 +622,9 @@
             <li class="header-menu__social-list-item">
                 <a href="" class="header-menu__link">LinkedIn</a>
             </li>
-    </div>
-    </div>
-
-    
+        </ul>
+    </div>   
+</div>
 </div>
 
         <div class="backdrop is-hidden" data-modal>
@@ -685,6 +684,7 @@
                 </button>
             </div>
         </div>
+
 <script src="./js/modal.js"></script>
 <script src="./js/menu-mobile.js"></script>
 </body>
