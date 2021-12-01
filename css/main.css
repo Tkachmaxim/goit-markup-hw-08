@@ -1208,7 +1208,6 @@ summary {
 }
 
 .header {
-  position: relative;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #ececec;
@@ -1924,12 +1923,6 @@ summary {
   .footer-content__adress-and-media {
     display: flex;
     justify-content: space-around;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-content__adress-logo {
-    margin-left: 15px;
   }
 }
 /*# sourceMappingURL=main.css.map */
